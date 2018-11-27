@@ -242,7 +242,41 @@ footer
       .row.content {height:auto;} 
     }
 
+
     .jumbotron {
+/*
 background-image: url(photo/bg.jpg);
+*/
 background-size: cover;
 height: auto;}
+
+
+
+/* jumbotron */
+#promo{
+  text-align:center;
+  padding:40px;
+  background:url(photo/bg.jpg) no-repeat;
+  background-size:cover;
+  margin-top:65px;
+}
+
+#promo .jumbotron{
+  border-radius:20px;
+  padding:40px;
+  background-color:rgba(255,255,255,0.75);
+  max-width:800px;
+  margin:0 auto;
+}
+
+@media (max-width:991px) {
+  #promo .jumbotron{
+    padding:20px;
+  }
+}
+
+@media (max-width:991px) {
+  #promo{
+    padding:20px;
+  }
+}
