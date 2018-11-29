@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Targetlinks</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+		textarea, iframe{
+			border: 2px solid #ddd;
+			height: 500px;
+			width: 100%;
+		}
+		#runbutton{
+			width: 10em;
+			height: 3em;
+			background-color: #000000;
+			border: none;
+   			color: white;
+    		padding: 15px 32px;
+    		text-align: center;
+    		text-decoration: none;
+    		display: inline-block;
+   			font-size: 16px;
+    		margin: 4px 2px;
+   			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<!-- nav bar -->
+	<nav class="navbar">
+          <a class="navbar-brand">
+    <img src="logo.jpg" width="30" height="30" alt="">
+  </a>
+
+        <ul class="main-nav" id="js-menu">
+            <li>
+                <a href="index.html" class="nav-links">Home</a>
+            </li>        	
+            <li>
+                <a href="content.html" class="nav-links">Textbook</a>
+            </li>
+            <li>
+                <a href="videos.html" class="nav-links">Videos</a>
+            </li>
+            <li>
+                <a href="tools.html" class="nav-links">Tools</a>
+            </li>
+            <li>
+                <a href="terms.html" class="nav-links">Terms</a>
+            </li>
+        </ul>
+</nav>
+	<!--end  nav bar -->
+
+	<!-- jumbotron -->
+	<div class="jumbotron jumbotron-fluid">
+  <div class="container container-head">
+    <h1 class="display-4 text-center">EDITOR</h1>
+  </div>
+</div>
+<!-- end jumbotron -->
+<table width= "100%" border = "0" cellspacing="5" cellpadding="5">
+
+	<td>
+		<form>
+			<strong><h2>CODE BELOW</h2></strong>
+			<textarea name="sourceCode" id = "sourceCode">
+
+			</textarea>
+		</form>
+
+	</td>
+	<td> <strong><h2>OUTPUT</h2></strong><iframe name ="targetCode" id = "targetCode"></iframe> </td>
+		<!-- RUN BUTTON -->
+		<tr>
+		<td width="50%" scope=" col">&nbsp;</td>
+		<td width="50%" scope=" col" align="right">
+			<input onclick="runCode();" type="button" value="Run" id="runbutton"> 
+			<!-- END OF RUN BUTTON -->
+			
+		</td>
+	</tr>
+
+</table>
+<script>
+	
+	function runCode() {
+		var content = document.getElementById('sourceCode').value;
+		var iframe = document.getElementById('targetCode');
+		iframe = (iframe.contentWindow)?iframe.contentWindow:(iframe.contentDocument)?
+		iframe.contentDocument.document: iframe.contentDocument;
+
+		iframe.document.open();
+		iframe.document.write(content);
+		iframe.document.close();
+		return false;
+	}
+	runCode();
+</script>
+	<!--footer -->
+<footer class="container-fluid text-center footer_color bottom">
+	<p>Connect with us @ Social Media </p>
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-google"></a>
+<a href="#" class="fa fa-linkedin"></a>
+<h6><p >
+Targetlinks is optimized for learning, viewing, and training. Content might be simplified to improve reading and basic understanding. Videos, references, and documents are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using this site, you agree to have read and accepted our terms of use and policy.</p><p> Copyright 2018. All Rights Reserved.
+Powered by www.targetlinks.ga
+</p></h6>
+</footer>
+	<!-- end footer -->
+</body>
+</html>
