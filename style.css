@@ -12,7 +12,7 @@
  }
 .navbar
 {
-	overflow: hidden;
+  overflow: hidden;
     
      /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
@@ -31,7 +31,7 @@
 
 .container-head
 {
-	 padding-top: 0px;
+   padding-top: 0px;
     padding-bottom:0px;
     background-size: cover;
     
@@ -57,7 +57,12 @@
 
 .bottom
 {
-    height: 5cm;
+    height: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
 }
 .first_box
 {
@@ -81,7 +86,8 @@
 
         .navbar, .footer_color {
             font-size: 18px;
-            background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+            background-color: #54575b;
+           /* background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%); */
             border: 1px solid rgba(0, 0, 0, 0.2);
             padding-bottom: 10px;
         }
@@ -183,11 +189,11 @@ footer
 
 .fa {
     padding: 20px;
-    font-size: 30px;
+    font-size: 18px;
     
     text-align: center;
     text-decoration: none;
-    border-radius: 50%;
+    border-radius: 25%;
 }
 
 .fa:hover {
@@ -282,5 +288,3 @@ height: auto;}
 }
 
 /* style of video display bar */
-
-
