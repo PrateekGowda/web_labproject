@@ -64,9 +64,10 @@
     color: white;
     text-align: center;
 }
-.first_box
+.blue-button
 {
-
+  margin: 0px;
+  background-color: #616366;
 }
 
 .btn
